@@ -12,6 +12,14 @@ def render_homepage():
 def render_people():
     return render_template("people.html")
 
+@app.route('/definitions')
+def render_definitions():
+    return render_template("definitions.html")
+
+@app.route('/ㅤㅤㅤㅤㅤ')
+def render_ㅤㅤㅤㅤㅤ():
+    return render_template("ㅤㅤㅤㅤㅤ.html")
+
 
 
 app.run(host="0.0.0.0")

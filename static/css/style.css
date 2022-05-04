@@ -24,6 +24,14 @@ nav {
 
 }
 
+nav ul li {
+    font-size: calc(1rem + 10px);
+}
+
+nav ul li:hover {
+    background-color: #a900f1;
+}
+
 main {
     grid-area: main;
     padding: 1rem;
@@ -293,8 +301,8 @@ footer img {
     }
 
     nav a:hover {
-        color: #000;
-        background-color: #fff;
+        /*color: #000;*/
+        /*background-color: #fff;*/
     }
     nav input, nav span {
         visibility: hidden;
