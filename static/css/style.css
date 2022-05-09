@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+#blur {
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: -1;
+}
 
 #container {
     display: grid;
@@ -54,7 +58,7 @@ h1, h2, h3, h4 {
     padding: 1rem 0;
     font-family: 'Suez One', serif;
     color: #000;
-    text-shadow: 2px 2px 4px #fff;
+    text-shadow: 2px 2px 4px #692aa7;
 }
 
 p {
@@ -101,19 +105,25 @@ img {
 
 table {
     width: 100%;
-    border: 2px solid #666;
+    border: 5px solid #ffffff;
     border-collapse: collapse;
+     font: 20px sans-serif;
 }
 
 th, td {
-    border: 1px solid #888;
+    border: 2px solid #454545;
     padding: 0.2rem;
     text-align: left;
 }
 th {
     background-color: #000;
-    color: #fff;
+    color: #ffffff;
 }
+td {
+    /*background-color: #000000;*/
+    color: #ffffff;
+}
+
 
 img .thumb {
     max-width: 90px;
@@ -127,8 +137,8 @@ footer {
 }
 
 footer p {
-    color: #000;
-    text-shadow: 2px 2px 4px #fff;
+    color: #000000;
+    text-shadow: 2px 2px 4px #692aa7;
     font-size: 1.5rem;
 }
 
@@ -153,7 +163,7 @@ footer img {
     nav a
     {
       text-decoration: none;
-      color: #232323;
+      color: #ffffff;
       transition: color 0.3s ease;
     }
 
@@ -287,6 +297,7 @@ footer img {
     nav {
         background: linear-gradient(180deg, rgb(111, 38, 174) 0%, rgb(179, 0, 255) 50%, rgb(235, 0, 255) 100%);
         padding: 0.5rem;
+        text-align: center;
     }
 
     nav ul {
@@ -309,7 +320,7 @@ footer img {
     }
 
     main {
-        background-image: url('/poutama.jpg');
+        background-image: url('Background.png');
     }
     .formRow {
         display: grid;
