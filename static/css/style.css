@@ -32,6 +32,10 @@ nav ul li {
     font-size: calc(1rem + 10px);
 }
 
+ul {
+    position: fixed;
+}
+
 nav ul li:hover {
     background-color: #a900f1;
 }
@@ -49,12 +53,18 @@ main {
 nav {
         background: linear-gradient(180deg, rgb(111, 38, 174) 0%, rgb(179, 0, 255) 50%, rgb(235, 0, 255) 100%);
         padding: 0.5rem;
+
     }
 
+login{
+    font-size: 24px;
+}
+    my-group{
+    font-size: 24px;
+}
 
 
-
-h1, h2, h3, h4 {
+h1, h2, h3, h4{
     padding: 1rem 0;
     font-family: 'Suez One', serif;
     color: #000;
@@ -72,22 +82,25 @@ a {
 img {
     width: 100%;
 }
-.dataForm {
+.datamy, .mvfor {
     margin: 1rem 0;
-    border: 1px solid #999;
+    border: 3px solid #c184ff;
     padding: 1rem;
-    background-color: #fcc;
+    background-color: #e0ccff;
     border-radius: 10px;
+    text-shadow: 2px 2px 4px #c184ff;
 }
 
-.dataForm input, textarea {
-    width: 100%;
+.mvfor input, textarea {
+    width: 50%;
+    height: 40px;
+    font-size: 24px;
     border-radius: 10px;
     padding: 0.3rem;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
-.dataForm p input {
+.mvfor p input {
     display: inline;
     width: 1rem;
     margin-left: 0.5rem;
@@ -105,15 +118,16 @@ img {
 
 table {
     width: 100%;
-    border: 5px solid #ffffff;
+    border: 2px solid #ffffff;
     border-collapse: collapse;
-     font: 20px sans-serif;
+    font: 24px sans-serif;
 }
 
 th, td {
     border: 2px solid #454545;
     padding: 0.2rem;
     text-align: left;
+
 }
 th {
     background-color: #000;
@@ -123,7 +137,30 @@ td {
     /*background-color: #000000;*/
     color: #ffffff;
 }
+.wat {
+    width: 250px;
+    height: 250px;
+    max-width: 1500px;
+    max-height: 500px;
+    min-width: 100px;
+    min-height: 100px;
+    transition-property: opacity, width, height;
+    transition-duration: 0.2s;
+    opacity: 0.1;
+}
 
+.wat:hover {
+    width: 1500px;
+    height: 500px;
+    opacity: 1;
+}
+
+img {
+    max-width: 150px;
+    max-height: 150px;
+    min-width: 100px;
+    min-height: 100px;
+}
 
 img .thumb {
     max-width: 90px;

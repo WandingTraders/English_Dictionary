@@ -11,7 +11,7 @@ def create_connection(db_file):
         connection = sqlite3.connect(db_file)
         connection.execute('pragma foreign_keys=ON')
         return connection
-    except Error as error:
+    except Exception as error:
         print(error)
         return None
 
@@ -23,16 +23,16 @@ def render_homepage():
 def render_definitions():
 
     #use connect function
-
+    conn = create_connection(database)
     #write the query
-    query = "SELECT * FROM 'Enlgish_Words' WHERE word_type = 'blah';"
+    query = "SELECT * FROM 'English_Words';"
+    # query = "SELECT * FROM 'English_Words' WHERE word_type = 'Animals';"
+    cursor = conn.execute(query)
+    results = cursor.fetchall()
+    print(cursor.fetchall())
+    conn.close()
 
-    #make cursor object
-    #use cursor obj to execute the function on the database.
-    # save results
-    # display results
-
-    return render_template("definitions.html", data=table.returnTable())
+    return render_template("definitions.html", results=results)
 
 @app.route('/people')
 def render_people():
@@ -41,6 +41,10 @@ def render_people():
 @app.route('/login')
 def render_login():
     return render_template("login.html")
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html')
 
 @app.route('/ㅤㅤㅤㅤㅤ')
 def render_ㅤㅤㅤㅤㅤ():

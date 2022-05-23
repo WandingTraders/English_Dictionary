@@ -8,25 +8,27 @@
 {% endblock %}
 
 {% block main %}
-<div id="blur">
     <h1 style="background-color:darkcyan;"><center> Definitions </center></h1>
     <br>
 
+<div id="blur">
+
 
 <table>
-    <th>English</th>
-    <th>Category</th>
+    <th>  #  </th>
+    <th>Word</th>
+    <th>Word Type</th>
     <th>Definition</th>
-    <th>Level</th>
-    {% for row in data %}
+    <th>Image</th>
+    {% for result in results %}
 
         <tr>
 
-            <td>{{row[0]}}</td>
-            <td>{{row[1]}}</td>
-            <td>{{row[2]}}</td>
-            <td>{{row[3]}}</td>
-
+            <td>{{result[0]}}</td>
+            <td>{{result[1]}}</td>
+            <td>{{result[2]}}</td>
+            <td>{{result[3]}}</td>
+            <td><img src="static/images/{{result[4]}}.jpg" /></td>
         </tr>
     {% endfor %}
 
